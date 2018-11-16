@@ -1,0 +1,460 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+<path>MPCD.ac</path>
+
+
+
+   <animation>
+     <type>select</type>
+	<object-name>monitor-on</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>2</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>monitor-night</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>1</value>
+         </equals>
+         </and>
+        </condition>
+  </animation>
+
+  <animation> 
+   <object-name>monitor-on</object-name>
+   <object-name>monitor-night</object-name>
+<object-name>fuel-ctr-day</object-name>
+<object-name>fuel-ctr-night</object-name>
+<object-name>fuel-wing-day</object-name>
+<object-name>fuel-wing-night</object-name>
+   <type>material</type>
+    <emission> 
+        <red>0.7</red>
+        <green>0.7</green>
+        <blue>0.7</blue>
+    </emission>
+  </animation>
+
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>knob</object-name>
+      <action>
+        <button>1</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/MPCD/selector</property>
+         <step>-1</step>
+         <min>0</min>
+         <max>2</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>knob</object-name>
+      <action>
+        <button>0</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/MPCD/selector</property>
+         <step>1</step>
+         <min>0</min>
+         <max>2</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>knob</object-name>
+      <action>
+        <button>3</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/MPCD/selector</property>
+         <step>-1</step>
+         <min>0</min>
+         <max>2</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+ 
+    <animation>
+      <type>pick</type>
+      <visible>true</visible>
+      <object-name>knob</object-name>
+      <action>
+        <button>4</button>
+        <repeatable>false</repeatable>
+      <binding>
+         <command>property-toggle</command>
+         <property>sim/sound/click</property>
+      </binding>
+      <binding>
+        <command>property-adjust</command>
+        <property>instrumentation/MPCD/selector</property>
+         <step>1</step>
+         <min>0</min>
+         <max>2</max>
+         <wrap>false</wrap>
+      </binding>
+    </action>
+  </animation>
+
+<animation>
+  <type>rotate</type>
+  <object-name>knob</object-name>
+  <property>instrumentation/MPCD/selector</property>
+  <factor>45</factor>
+  <center>
+   <x-m>0.019</x-m>
+   <y-m>0.028</y-m>
+   <z-m>-0.139</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+<!-- lighting -->
+
+  <animation> 
+   <object-name>base</object-name>
+   <object-name>knob</object-name>
+   <object-name>sel-knob</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.2</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+  <animation> 
+   <object-name>sw-upr1</object-name>
+   <object-name>sw-upr2</object-name>
+   <object-name>sw-upr3</object-name>
+   <object-name>sw-upr4</object-name>
+   <object-name>sw-upr5</object-name>
+   <object-name>sw-lwr1</object-name>
+   <object-name>sw-lwr2</object-name>
+   <object-name>sw-lwr3</object-name>
+   <object-name>sw-lwr4</object-name>
+   <object-name>sw-lwr5</object-name>
+   <object-name>sw-left1</object-name>
+   <object-name>sw-left2</object-name>
+   <object-name>sw-left3</object-name>
+   <object-name>sw-left4</object-name>
+   <object-name>sw-left5</object-name>
+   <object-name>sw-right1</object-name>
+   <object-name>sw-right2</object-name>
+   <object-name>sw-right3</object-name>
+   <object-name>sw-right4</object-name>
+   <object-name>sw-right5</object-name>
+   <type>material</type>
+    <emission> 
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+        <red>0.5</red>
+        <green>0.4</green>
+        <blue>0.2</blue>
+      </emission>
+  </animation>
+
+<!-- EXT TANK CTR -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>sw-upr3</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/ext-tank-ctr-selected</property>
+        <value type="int">0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[5]/selected</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[5]/level-norm</property>
+        <value>0</value>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>sw-upr3</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/ext-tank-ctr-selected</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[5]/selected</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[5]/level-norm</property>
+        <value>1</value>
+      </binding>
+    </action>
+  </animation>
+
+
+   <animation>
+     <type>select</type>
+	<object-name>fuel-ctr-day</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>2</value>
+         </equals>
+         <equals>
+           <property>/consumables/fuel/ext-tank-ctr-selected</property>
+            <value>1</value>
+         </equals>
+         </and>
+        </condition>
+     </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>fuel-ctr-night</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>1</value>
+         </equals>
+         <equals>
+           <property>/consumables/fuel/ext-tank-ctr-selected</property>
+            <value>1</value>
+         </equals>
+         </and>
+        </condition>
+    </animation>
+
+
+
+
+
+
+<!-- EXT TANK WING -->
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>sw-upr1</object-name>
+    <object-name>sw-upr5</object-name>
+    <action>
+      <button>0</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/ext-tank-wing-selected</property>
+        <value type="int">0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[6]/selected</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[6]/level-norm</property>
+        <value>0</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[7]/selected</property>
+        <value>false</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[7]/level-norm</property>
+        <value>0</value>
+      </binding>
+    </action>
+  </animation>
+
+
+  <animation>
+    <type>pick</type>
+    <visible>true</visible>
+    <object-name>sw-upr1</object-name>
+    <object-name>sw-upr5</object-name>
+    <action>
+      <button>1</button>
+      <repeatable>false</repeatable>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/ext-tank-wing-selected</property>
+        <value type="int">1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[6]/selected</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[6]/level-norm</property>
+        <value>1</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[7]/selected</property>
+        <value>true</value>
+      </binding>
+      <binding>
+        <command>property-assign</command>
+        <property>/consumables/fuel/tank[7]/level-norm</property>
+        <value>1</value>
+      </binding>
+    </action>
+  </animation>
+
+
+   <animation>
+     <type>select</type>
+	<object-name>fuel-wing-day</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>2</value>
+         </equals>
+         <equals>
+           <property>/consumables/fuel/ext-tank-wing-selected</property>
+            <value>1</value>
+         </equals>
+         </and>
+        </condition>
+     </animation>
+
+   <animation>
+     <type>select</type>
+	<object-name>fuel-wing-night</object-name>
+        <condition>
+         <and>
+         <or>
+            <property>controls/electric/engine/generator</property>
+            <property>controls/electric/engine[1]/generator</property>
+         </or>
+         <greater-than>
+            <property>systems/electrical/volts</property>
+            <value>24</value>
+         </greater-than>
+         <equals>
+            <property>instrumentation/MPCD/selector</property>
+            <value>1</value>
+         </equals>
+         <equals>
+           <property>/consumables/fuel/ext-tank-wing-selected</property>
+            <value>1</value>
+         </equals>
+         </and>
+        </condition>
+    </animation>
+
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>10</max-m>
+ </animation>
+
+</PropertyList>

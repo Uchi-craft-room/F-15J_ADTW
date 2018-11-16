@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+
+    <path>ff.ac</path>
+
+    <animation>
+        <type>material</type>
+        <object-name>Prpm.1</object-name>
+        <object-name>Prop.ind</object-name>   
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.2 </green>
+      <blue>  0.2 </blue>
+    </emission>
+  </animation>
+
+    <animation>
+        <type>material</type>
+        <object-name>PropRPM.face</object-name>
+        <object-name>PropRPMneedle</object-name>
+        <object-name>drum-4</object-name>
+        <object-name>drum-3</object-name>
+        <object-name>drum-2</object-name>
+        <object-name>drum-1</object-name>    
+     <emission>
+      <factor-prop>systems/electrical/outputs/instrument-lights-norm</factor-prop>
+      <red>   0.5 </red>
+      <green> 0.5 </green>
+      <blue>  0.4 </blue>
+    </emission>
+  </animation>
+
+
+    <animation>
+        <type>rotate</type>
+        <object-name>PropRPMneedle</object-name>
+        <property>engines/engine[1]/fuel-flow-gph</property>
+        <interpolation>
+            <entry><ind>0</ind><dep>0</dep></entry>>
+            <entry><ind>10000</ind><dep>240</dep></entry>
+        </interpolation>
+        <axis>
+            <x>-1</x>
+            <y>0</y>
+            <z>0</z>
+        </axis>
+    </animation>
+
+
+<!--  drum counter -->
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-3</object-name>
+  <property>engines/engine[1]/fuel-flow-gph</property>
+  <factor>0.001</factor>
+  <offset>-100</offset>
+  <step>100</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-2</object-name>
+  <property>engines/engine[1]/fuel-flow-gph</property>
+  <factor>0.0001</factor>
+  <offset>-1000</offset>
+  <step>1000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+
+
+ <animation>
+  <type>textranslate</type>
+  <object-name>drum-1</object-name>
+  <property>engines/engine[1]/fuel-flow-gph</property>
+  <factor>0.00001</factor>
+  <offset>-10000</offset>
+  <step>10000</step>
+  <scroll>0.01</scroll>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>-1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+</PropertyList>
+
