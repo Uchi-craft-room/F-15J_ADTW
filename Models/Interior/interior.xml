@@ -44,6 +44,16 @@
     </offsets>
   </model>
 
+  <!-- HUD SYMBOL -->
+  <model>
+    <name>HUD SYMBOL</name>
+    <path>Aircraft/F-15DJ_ADTW/Models/Interior/Panel/hud/symbol.xml</path>
+    <offsets>
+      <x-m> -6.730 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  1.280 </z-m>
+    </offsets>
+  </model>
 
 
 
