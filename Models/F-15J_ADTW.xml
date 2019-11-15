@@ -1391,6 +1391,51 @@
 
 
 
+   <model>
+    <name>TireSmokeRight</name>
+    <path>Aircraft/F-15J_ADTW/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m>  1.085 </x-m>
+      <y-m>  1.547 </y-m>
+      <z-m> -1.861 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeRight</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[1]/compression-m</property>
+	  <value>0.1</value>
+	</greater-than>
+      </condition>
+  </animation>
+
+   <model>
+    <name>TireSmokeLeft</name>
+    <path>Aircraft/F-15J_ADTW/Models/effects/tiresmoke/tiresmoke.xml</path>
+    <offsets>
+      <x-m>  1.085 </x-m>
+      <y-m> -1.547 </y-m>
+      <z-m> -1.861 </z-m>
+    </offsets>
+  </model>
+
+  <animation>
+    <type>select</type>
+    <object-name>TireSmokeLeft</object-name>
+      <condition>
+	<greater-than>
+          <property>/gear/gear[0]/compression-m</property>
+	  <value>0.1</value>
+	</greater-than>
+      </condition>
+  </animation>
+
+
+
+
   <!-- Canopy -->
   <animation>
     <name>CanopyTotale</name>

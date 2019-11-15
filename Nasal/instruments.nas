@@ -165,3 +165,17 @@ setlistener("/engines/engine[0]/n1",func{
              interpolate("/environment/aircraft-effects/frost-level",(getprop("/environment/total-air-temperature-degc")+10)*getprop("/environment/windowheat-level")*-0.03,1)});
 setlistener("/controls/anti-ice/window-heat",func{
              interpolate("/environment/windowheat-level",1-getprop("/controls/anti-ice/window-heat")*0.9,10)});
+
+######################### HUD NAV BEARING ############################################
+
+props.globals.getNode("/instrumentation/nav/nav-needle-error-deg",0).setDoubleValue(0.0);
+
+setlistener("/engines/engine[0]/n1",func{interpolate("/instrumentation/nav/nav-needle-error-deg",getprop("/instrumentation/nav/heading-deg")-getprop("/orientation/heading-deg"),0.01)});
+
+######################### HUD TACAN BEARING ############################################
+
+props.globals.getNode("/instrumentation/tacan/tacan-needle-error-deg",0).setDoubleValue(0.0);
+
+setlistener("/engines/engine[0]/n1",func{interpolate("instrumentation/tacan/tacan-needle-error-deg",getprop("/instrumentation/tacan/indicated-bearing-true-deg")-getprop("/orientation/heading-deg"),0.01)});
+
+

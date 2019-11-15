@@ -1,3 +1,3 @@
-aircraft.livery.init("Aircraft/T-7/Models/Liveries");
+aircraft.livery.init("Aircraft/F-15J_ADTW/Models/Liveries");
 
 
