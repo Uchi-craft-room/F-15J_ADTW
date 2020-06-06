@@ -1496,7 +1496,25 @@
   </model>
 
   <model>
+    <path>Aircraft/F-15J_ADTW/Models/Effects/lights/procedural_light_nav_left.xml</path>
+    <offsets>
+      <x-m> 2.978 </x-m>
+      <y-m> -6.480 </y-m>
+      <z-m>  0.245</z-m>
+    </offsets>
+  </model>
+
+  <model>
     <path>Aircraft/F-15J_ADTW/Models/light/GreenLight.xml</path>
+    <offsets>
+      <x-m> 3.001 </x-m>
+      <y-m> 6.481 </y-m>
+      <z-m> 0.245</z-m>
+    </offsets>
+  </model>
+
+  <model>
+    <path>Aircraft/F-15J_ADTW/Models/Effects/lights/procedural_light_nav_right.xml</path>
     <offsets>
       <x-m> 3.001 </x-m>
       <y-m> 6.481 </y-m>
@@ -1515,9 +1533,21 @@
     </offsets>
   </model>
 
+  <model>
+  <name>Tail-Light_prc</name>
+    <path>Aircraft/F-15J_ADTW/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> 7.357 </x-m>
+      <y-m> -1.686 </y-m>
+      <z-m> 3.299 </z-m>
+      <heading-deg> 180 </heading-deg>
+    </offsets>
+  </model>
+
   <animation>
     <type>select</type>
     <object-name>Tail-Light</object-name>
+    <object-name>Tail-Light_prc</object-name>
     <condition>
           <property>controls/lighting/nav-lights</property>
     </condition>
@@ -1706,9 +1736,20 @@
     </offsets>
   </model>
 
+  <model>
+    <name>LAND_Light-prc</name>
+    <path>Aircraft/F-15J_ADTW/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> -4.736 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -1.265 </z-m>
+    </offsets>
+  </model>
+
   <animation>
     <type>select</type>
     <object-name>LAND_Light</object-name>
+    <object-name>LAND_Light-prc</object-name>
     <condition>
         <and>
         <equals>
@@ -1738,9 +1779,20 @@
     </offsets>
   </model>
 
+  <model>
+    <name>TAXI_Light_prc</name>
+    <path>Aircraft/F-15J_ADTW/Models/Effects/lights/procedural_light_nav_tail.xml</path>
+    <offsets>
+      <x-m> -4.820 </x-m>
+      <y-m>  0.0 </y-m>
+      <z-m>  -1.050 </z-m>
+    </offsets>
+  </model>
+
   <animation>
     <type>select</type>
     <object-name>TAXI_Light</object-name>
+    <object-name>TAXI_Light_prc</object-name>
     <condition>
         <and>
         <equals>

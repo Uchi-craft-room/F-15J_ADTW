@@ -170,7 +170,7 @@
 
 <model>
    <name>symbols</name>
-   <path>Aircraft/F-15J_ADTW/Models/Interior/Panel/TEWS/symbol.xml</path>
+   <path>Aircraft/F-15DJ_ADTW/Models/Interior/Panel/TEWS/symbol.xml</path>
     <offsets>
       <x-m>  0.000 </x-m>
       <y-m>  0.000 </y-m>
