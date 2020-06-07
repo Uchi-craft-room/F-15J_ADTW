@@ -343,8 +343,6 @@
   </axis>
  </animation>
 
-
-
 <!-- wing-inter-right drum counter -->
 
 	<animation>
@@ -1058,8 +1056,24 @@
   </axis>
  </animation>
 
+<!-- ext-ctr-right drum counter -->
 
 
+	<animation>
+		<type>select</type>
+		<object-name>drum-1-right.004</object-name>
+                <object-name>drum-2-right.004</object-name>
+                <object-name>drum-3-right.004</object-name>
+                <object-name>drum-4-right.004</object-name>
+		<condition>
+			<equals>
+				<property>instrumentation/fuelgauge/selector</property>
+				<value>4</value>
+			</equals>
+		</condition>
+	</animation>
+
+ 
 
 
 <!-- lighting -->
